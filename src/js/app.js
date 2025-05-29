@@ -4,7 +4,6 @@ const map = L.map("map").setView(initialCoordinates, initialZoom);
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
-console.log("Mapa inicializado!");
 
 let geojsonLayer = null;
 
@@ -110,7 +109,6 @@ function applyCurrentStyleToGeoJsonLayer() {
   if (input) {
     input.addEventListener("input", () => {
       updateCurrentStyleFromInputs();
-      // applyCurrentStyleToGeoJsonLayer();
     });
   }
 });
@@ -163,7 +161,6 @@ function addGeoJsonToMap(geojsonData) {
     },
     pointToLayer: function (feature, latlng) {
       return L.circleMarker(latlng, {
-        /* Estilos já são definidos pela função 'style' acima */
       });
     },
     onEachFeature: function (feature, layer) {
@@ -280,12 +277,12 @@ if (exportGeoJsonButton) {
   exportGeoJsonButton.addEventListener("click", () => {
     if (geojsonLayer && Object.keys(geojsonLayer.toGeoJSON().features).length > 0) {
       const geoJsonData = geojsonLayer.toGeoJSON();
-      const geoJsonString = JSON.stringify(geoJsonData, null, 2); // O 'null, 2' formata o JSON
+      const geoJsonString = JSON.stringify(geoJsonData, null, 2);
       triggerDownload(geoJsonString, "mapa_exportado.geojson", "application/json");
     } else if (geojsonEditor && geojsonEditor.getValue().trim() !== "") {
       try {
         const geojsonStringFromEditor = geojsonEditor.getValue();
-        JSON.parse(geojsonStringFromEditor); // Apenas para validar
+        JSON.parse(geojsonStringFromEditor); 
         triggerDownload(geojsonStringFromEditor, "editor_exportado.geojson", "application/json");
       } catch (error) {
         alert("Não há dados GeoJSON válidos na camada do mapa ou no editor para exportar.");
