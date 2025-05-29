@@ -1,0 +1,234 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 15px 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8em;
+}
+
+.main-container {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.controls {
+  width: 250px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex-shrink: 0;
+}
+
+.controls h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.3em;
+  color: #333;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 8px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+input[type="file"] {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="file"]::file-selector-button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: #0056b3;
+}
+
+#map {
+  flex-grow: 1;
+  height: 100%;
+}
+
+.geojson-input-area {
+  width: 350px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.geojson-input-area h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.3em;
+  color: #333;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 8px;
+}
+
+.CodeMirror {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  height: auto;
+  flex-grow: 1;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+}
+
+.geojson-input-area button {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.geojson-input-area button:hover {
+  background-color: #218838;
+}
+
+
+.leaflet-popup-content-wrapper {
+  border-radius: 5px;
+}
+
+.leaflet-popup-content h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 1.1em;
+}
+
+.leaflet-popup-content ul {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 0.9em;
+}
+
+.controls hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+}
+
+.controls h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+.controls h4 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 1em;
+  color: #555;
+}
+
+.control-group {
+  margin-bottom: 12px;
+}
+
+.control-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: normal;
+  font-size: 0.9em;
+}
+
+.control-group input[type="color"] {
+  width: 100%;
+  height: 30px;
+  padding: 0;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+.control-group input[type="range"] {
+  width: 100%;
+  margin-top: 2px;
+}
+
+.controls button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.controls button:hover {
+  background-color: #0056b3;
+}
+
+#applyStyleButton {
+  background-color: #17a2b8;
+}
+
+#applyStyleButton:hover {
+  background-color: #138496;
+}
+
+#exportGeoJsonButton {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+#exportGeoJsonButton:hover {
+  background-color: #e0a800;
+}
+
+#exportImageButton {
+  background-color: #6f42c1;
+}
+
+#exportImageButton:hover {
+  background-color: #5a32a3;
+}
